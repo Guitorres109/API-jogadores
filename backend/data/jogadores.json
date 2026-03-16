@@ -1,0 +1,113 @@
+{
+  "neymar": {
+    "idade": 33,
+    "time": "santos",
+    "nacionalidade": "brasileiro",
+    "foto": ["neymar.webp"]
+  },
+
+  "cavani": {
+    "idade": 36,
+    "time": "valencia",
+    "nacionalidade": "uruguaio",
+    "foto": ["cavani.jpg"]
+  },
+
+  "cristiano_ronaldo": {
+    "idade": 38,
+    "time": "al-nassr",
+    "nacionalidade": "português",
+    "foto": ["cr7.jpg"]
+  },
+
+  "dembele": {
+    "idade": 26,
+    "time": "barcelona",
+    "nacionalidade": "francês",
+    "foto": ["dembele.webp"]
+  },
+
+  "dybala": {
+    "idade": 29,
+    "time": "roma",
+    "nacionalidade": "argentino",
+    "foto": ["dybala.jpg"]
+  },
+
+  "griezmann": {
+    "idade": 32,
+    "time": "atm",
+    "nacionalidade": "francês",
+    "foto": ["griezzman.jpg"]
+  },
+
+  "haaland": {
+    "idade": 23,
+    "time": "manchester city",
+    "nacionalidade": "norueguês",
+    "foto": ["haaland.webp"]
+  },
+
+  "julian_alvarez": {
+    "idade": 23,
+    "time": "manchester city",
+    "nacionalidade": "argentino",
+    "foto": ["julian-alvarez.webp"]
+  },
+
+  "kvaratskhelia": {
+    "idade": 21,
+    "time": "napoli",
+    "nacionalidade": "georgiano",
+    "foto": ["kvara.jpeg"]
+  },
+
+  "mbappe": {
+    "idade": 24,
+    "time": "paris saint-germain",
+    "nacionalidade": "francês",
+    "foto": ["mbappe.avif", "mbappe-meme.jpg" ]
+  },
+
+  "memphis_depay": {
+    "idade": 29,
+    "time": "atletico madrid",
+    "nacionalidade": "holandês",
+    "foto": ["memphis.jpg"]
+  },
+
+  "messi": {
+    "idade": 35,
+    "time": "inter miami",
+    "nacionalidade": "argentino",
+    "foto": ["messi.webp"]
+  },
+
+  "rodrygo": {
+    "idade": 22,
+    "time": "real madrid",
+    "nacionalidade": "brasileiro",
+    "foto": ["rodrygo.jpg"]
+  },
+
+  "suarez": {
+    "idade": 36,
+    "time": "grêmio",
+    "nacionalidade": "uruguaio",
+    "foto": ["suares.webp"]
+  },
+  
+  "vini_junior": {
+    "idade": 22,
+    "time": "real madrid",
+    "nacionalidade": "brasileiro",
+    "foto": ["vinijr.jpg" , "vini-meme.jpeg"]
+  },
+
+  "yamal": {
+    "idade": 20,
+    "time": "paris saint-germain",
+    "nacionalidade": "argelino",
+    "foto": ["yamal.webp"]
+  }
+}

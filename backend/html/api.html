@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação da API de Jogadores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .endpoint {
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Documentação da API de Jogadores</h1>
+        <p>API para consultar informações de jogadores e imagens aleatórias</p>
+    </header>
+    <main>
+        <h2>Base URL</h2>
+        <p>Supondo que a aplicação esteja rodando localmente:</p>
+        <pre><code>http://SEU_IP:3000</code></pre>
+
+        <h2>Endpoints</h2>
+
+        <div class="endpoint">
+            <h3>1. Verificar status do servidor</h3>
+            <p><strong>GET /verificar</strong></p>
+            <p>Verifica se o servidor está online.</p>
+            <p>Resposta de sucesso:</p>
+            <pre><code>{
+    "status": "success",
+    "message": "Servidor está online e respondendo"
+}</code></pre>
+        </div>
+
+        <div class="endpoint">
+            <h3>2. Jogador aleatório</h3>
+            <p><strong>GET /api/jogadores/aleatorio</strong></p>
+            <p>Retorna um jogador aleatório com uma foto aleatória.</p>
+            <p>Exemplo de resposta:</p>
+            <pre><code>{
+    "status": "success",
+    "message": "Jogador: neymar\nIdade: 31\nTime: PSG\nNacionalidade: Brasil",
+    "foto": "http://SEU_IP:3000/img/neymar1.jpg"
+}</code></pre>
+        </div>
+
+        <div class="endpoint">
+            <h3>3. Pesquisar jogador por nome</h3>
+            <p><strong>GET /api/jogadores/:nome</strong></p>
+            <p>Substitua <code>:nome</code> pelo nome do jogador (em letras minúsculas).</p>
+            <p>Exemplo: <code>/api/jogadores/neymar</code></p>
+            <p>Resposta de sucesso:</p>
+            <pre><code>{
+    "status": "success",
+    "message": "Jogador: neymar\nIdade: 31\nTime: PSG\nNacionalidade: Brasil",
+    "foto": "http://SEU_IP:3000/img/neymar1.jpg"
+}</code></pre>
+            <p>Resposta se o jogador não for encontrado:</p>
+            <pre><code>{
+    "status": "error",
+    "message": "Jogador \"nome\" não encontrado"
+}</code></pre>
+        </div>
+
+        <h2>Servindo imagens</h2>
+        <p>As imagens dos jogadores ficam disponíveis em:</p>
+        <pre><code>GET /img/NOME_DA_IMAGEM.jpg</code></pre>
+
+        <h2>Observações</h2>
+        <ul>
+            <li>O IP do servidor deve ser obtido dinamicamente (pode ser o <code>localhost</code> ou IP da rede local).</li>
+            <li>Os nomes dos jogadores no JSON devem estar em letras minúsculas para a pesquisa funcionar corretamente.</li>
+            <li>O endpoint aleatório retorna também uma imagem aleatória do jogador.</li>
+        </ul>
+    </main>
+</body>
+</html>
