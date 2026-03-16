@@ -4,11 +4,33 @@ const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
 const jogadores = require("./data/jogadores.json")
+const API_KEY = "minha_chave_super_secreta";
 const app = express();
 const PORT = 3000;
 const os = require("os");
 let ip = null;
 app.use(cors())
+
+function verificarApiKey(req, res, next) {
+
+    const chave = req.query.key || req.headers["x-api-key"];
+
+    if(!chave){
+        return res.status(401).json({
+            status: "error",
+            message: "API Key não fornecida"
+        });
+    }
+
+    if(chave !== API_KEY){
+        return res.status(403).json({
+            status: "error",
+            message: "API Key inválida"
+        });
+    }
+
+    next();
+}
 
 app.use(
     "/img",
@@ -37,33 +59,33 @@ app.get("/verificar", (req, res) => {
     })
 })
 
-app.get("/api/jogadores/aleatorio", (req, res) => {
+app.get("/api/jogadores/aleatorio", verificarApiKey, (req, res) => {
     const nomes = Object.keys(jogadores);
     const nomeSorteado = sortear(nomes);
     const jogador = jogadores[nomeSorteado];
     const foto = sortear(jogador.foto);
     res.json({
         status: "success",
-        message: `Jogador: ${nomeSorteado}\nIdade: ${jogador.idade}\nTime: ${jogador.time}\nNacionalidade: ${jogador.nacionalidade}`,
+        message: `Jogador: ${jogador.nome}\nIdade: ${jogador.idade}\nTime: ${jogador.time}\nNacionalidade: ${jogador.nacionalidade}`,
         foto: `http://${ip}:${PORT}/img/${foto}`
     });
 });
 
-app.get("/api/jogadores/:pesquisa", (req, res) => {
+app.get("/api/jogadores/:pesquisa", verificarApiKey, (req, res) => {
     const nomes = Object.keys(jogadores);
     const pesquisa = req.params.pesquisa.toLocaleLowerCase();
     const jogador = jogadores[pesquisa];
     const foto = sortear(jogador.foto);
     if(!jogadores[pesquisa]){
         res.status(404).json({
-            status: "error",
+            status: "success",
             message: `Jogador "${pesquisa}" não encontrado`
         });
         return;
     } else{
         res.json({
             status: "success",
-            message: `Jogador: ${pesquisa}\nIdade: ${jogador.idade}\nTime: ${jogador.time}\nNacionalidade: ${jogador.nacionalidade}`,
+            message: `Jogador: ${jogador.nome}\nIdade: ${jogador.idade}\nTime: ${jogador.time}\nNacionalidade: ${jogador.nacionalidade}`,
             foto: `http://${ip}:${PORT}/img/${foto}`
         });
     }

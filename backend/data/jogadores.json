@@ -1,113 +1,137 @@
 {
   "neymar": {
+    "nome": "Neymar Júnior",
     "idade": 33,
     "time": "santos",
-    "nacionalidade": "brasileiro",
-    "foto": ["neymar.webp"]
+    "nacionalidade": "brasileiro 🇧🇷",
+    "foto": ["neymar.webp","neymar-meme.jpg","neymar-meme2.jpg"]
   },
 
   "cavani": {
+    "nome": "Edinson Cavani",
     "idade": 36,
     "time": "valencia",
-    "nacionalidade": "uruguaio",
+    "nacionalidade": "uruguaio 🇺🇾",
     "foto": ["cavani.jpg"]
   },
 
   "cristiano_ronaldo": {
+    "nome": "Cristiano Ronaldo",
     "idade": 38,
     "time": "al-nassr",
-    "nacionalidade": "português",
+    "nacionalidade": "português 🇵🇹",
     "foto": ["cr7.jpg"]
   },
 
   "dembele": {
+    "nome": "Ousmane Dembélé",
     "idade": 26,
     "time": "barcelona",
-    "nacionalidade": "francês",
+    "nacionalidade": "francês 🇫🇷",
     "foto": ["dembele.webp"]
   },
 
   "dybala": {
+    "nome": "Paulo Dybala",
     "idade": 29,
     "time": "roma",
-    "nacionalidade": "argentino",
+    "nacionalidade": "argentino 🇦🇷",
     "foto": ["dybala.jpg"]
   },
 
   "griezmann": {
+    "nome": "Antoine Griezmann",
     "idade": 32,
     "time": "atm",
-    "nacionalidade": "francês",
+    "nacionalidade": "francês 🇫🇷",
     "foto": ["griezzman.jpg"]
   },
 
   "haaland": {
+    "nome": "Erling Haaland",
     "idade": 23,
     "time": "manchester city",
-    "nacionalidade": "norueguês",
-    "foto": ["haaland.webp"]
+    "nacionalidade": "norueguês 🇳🇴",
+    "foto": ["haaland.webp", "haaland-meme.jpg"]
   },
 
   "julian_alvarez": {
+    "nome": "Julián Álvarez",
     "idade": 23,
     "time": "manchester city",
-    "nacionalidade": "argentino",
+    "nacionalidade": "argentino 🇦🇷",
     "foto": ["julian-alvarez.webp"]
   },
 
   "kvaratskhelia": {
+    "nome": "Khvicha Kvaratskhelia",
     "idade": 21,
     "time": "napoli",
-    "nacionalidade": "georgiano",
+    "nacionalidade": "georgiano 🇬🇪",
     "foto": ["kvara.jpeg"]
   },
 
   "mbappe": {
+    "nome": "Kylian Mbappé",
     "idade": 24,
     "time": "paris saint-germain",
-    "nacionalidade": "francês",
-    "foto": ["mbappe.avif", "mbappe-meme.jpg" ]
+    "nacionalidade": "francês 🇫🇷",
+    "foto": ["mbappe.avif", "mbappe-meme.jpg"]
   },
 
   "memphis_depay": {
+    "nome": "Memphis Depay",
     "idade": 29,
     "time": "atletico madrid",
-    "nacionalidade": "holandês",
+    "nacionalidade": "holandês 🇳🇱",
     "foto": ["memphis.jpg"]
   },
 
   "messi": {
+    "nome": "Lionel Messi",
     "idade": 35,
     "time": "inter miami",
-    "nacionalidade": "argentino",
-    "foto": ["messi.webp"]
+    "nacionalidade": "argentino 🇦🇷",
+    "foto": ["messi.webp", "messi-meme.gif"]
   },
 
   "rodrygo": {
+    "nome": "Rodrygo Goes",
     "idade": 22,
     "time": "real madrid",
-    "nacionalidade": "brasileiro",
+    "nacionalidade": "brasileiro 🇧🇷",
     "foto": ["rodrygo.jpg"]
   },
 
   "suarez": {
+    "nome": "Luis Suárez",
     "idade": 36,
     "time": "grêmio",
-    "nacionalidade": "uruguaio",
+    "nacionalidade": "uruguaio 🇺🇾",
     "foto": ["suares.webp"]
   },
   
   "vini_junior": {
+    "nome": "Vinícius Júnior",
     "idade": 22,
     "time": "real madrid",
-    "nacionalidade": "brasileiro",
+    "nacionalidade": "brasileiro 🇧🇷",
     "foto": ["vinijr.jpg" , "vini-meme.jpeg"]
   },
 
   "yamal": {
+    "nome": "Lamine Yamal",
     "idade": 20,
     "time": "paris saint-germain",
-    "nacionalidade": "argelino",
+    "nacionalidade": "argelino 🇩🇿",
     "foto": ["yamal.webp"]
+  },
+
+  "bruno_martins": {
+    "nome": "Bruno Martins Indi",
+    "idade": 34,
+    "time": "AZ Alkmaar",
+    "nacionalidade": "holandês 🇳🇱",
+    "foto": ["meme.avif"]
   }
 }
