@@ -1,12 +1,13 @@
+require("dotenv").config({ path: "./.env" });
+const PORT = process.env.PORT || 3000;
+const API_KEY = process.env.API_KEY;
 const http = require("http");
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
 const jogadores = require("./data/jogadores.json")
-const API_KEY = "minha_chave_super_secreta";
 const app = express();
-const PORT = 3000;
 const os = require("os");
 let ip = null;
 app.use(cors())
@@ -14,7 +15,6 @@ app.use(cors())
 function verificarApiKey(req, res, next) {
 
     const chave = req.query.key || req.headers["x-api-key"];
-
     if(!chave){
         return res.status(401).json({
             status: "error",
@@ -110,6 +110,4 @@ encontrarIP()
 //iNICIA O SERVIDOR
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://${ip}:${PORT}`)
-    console.log(`Cachorros aleatórios em http://${ip}:${PORT}/api/jogadores/aleatorio`)
-    console.log(`Pesquisar cachorros em (exemplo) http://${ip}:${PORT}/api/jogadores/neymar`)
 })
