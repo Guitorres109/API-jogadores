@@ -55,7 +55,7 @@ app.get("/api", (req, res) => {
 app.get("/verificar", (req, res) => {
     res.json({
         status: "success",
-        message: `Servidor está online e respondendo`
+        message: `Servidor está online e respondendo!`
     })
 })
 

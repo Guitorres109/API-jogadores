@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servidor Online</title>
+    <link rel="icon" href="../data/img/Icon-bola.svg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,10 +36,12 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
-        code {
+        code, a {
             background-color: #ecf0f1;
             padding: 2px 5px;
             border-radius: 3px;
+            text-decoration: none;
+            color: black;
         }
         .status-success {
             color: green;
@@ -53,8 +56,8 @@
     <main>
         <h1 class="status-success">✅ Servidor Online!</h1>
         <p>O servidor está funcionando corretamente e pronto para responder às requisições.</p>
-        <p>Acesse a documentação da API em <code>/api</code>.</p>
-        <p>Verifique o status com <code>/verificar</code>.</p>
+        <p>Acesse a documentação da API em <code><a href="http://10.106.208.7:3000/api">/api</a></code>.</p>
+        <!-- <p>Verifique o status com <code><a href="http://10.106.208.7:3000/verificar">/verificar</a></code>.</p> -->
     </main>
     </script>
 </body>
